@@ -1,0 +1,262 @@
+/* Tournament Courses Section Styles */
+.tournament-courses {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #333;
+    background-color: #f8fafb;
+    padding: 60px 0;
+}
+
+.tournament-courses * {
+    box-sizing: border-box;
+}
+
+.tournament-courses .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tournament-courses .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.tournament-courses .section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 20px;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+}
+
+.tournament-courses .section-subtitle {
+    font-size: 1.2rem;
+    color: #718096;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.tournament-courses .courses-grid {
+    display: grid;
+    gap: 60px;
+}
+
+.tournament-courses .course-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tournament-courses .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.tournament-courses .course-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+}
+
+.tournament-courses .course-content.reverse .course-text {
+    order: 2;
+}
+
+.tournament-courses .course-content.reverse .course-image {
+    order: 1;
+}
+
+.tournament-courses .course-text {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tournament-courses .course-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.tournament-courses .course-description {
+    font-size: 1rem;
+    color: #4a5568;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.tournament-courses .course-highlights {
+    background: #f7fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #4299e1;
+    margin-bottom: 24px;
+}
+
+.tournament-courses .course-highlights p {
+    font-size: 0.9rem;
+    color: #2d3748;
+    font-weight: 500;
+    margin: 0;
+}
+
+.tournament-courses .course-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.tournament-courses .course-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tournament-courses .course-card:hover .course-image img {
+    transform: scale(1.05);
+}
+
+.tournament-courses .course-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #2d3748;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+.tournament-courses .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+}
+
+.tournament-courses .stat-item {
+    text-align: center;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.tournament-courses .stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4299e1;
+    display: block;
+}
+
+.tournament-courses .stat-label {
+    font-size: 0.8rem;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 4px;
+}
+
+.tournament-courses .cta-section {
+    text-align: center;
+    margin-top: 80px;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    color: white;
+}
+
+.tournament-courses .cta-title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.tournament-courses .cta-description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.tournament-courses .cta-button {
+    display: inline-block;
+    background: white;
+    color: #667eea;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tournament-courses .cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tournament-courses {
+        padding: 40px 0;
+    }
+
+    .tournament-courses .section-title {
+        font-size: 2.2rem;
+    }
+
+    .tournament-courses .course-content {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .tournament-courses .course-content.reverse .course-text,
+    .tournament-courses .course-content.reverse .course-image {
+        order: unset;
+    }
+
+    .tournament-courses .course-text {
+        padding: 30px 24px;
+    }
+
+    .tournament-courses .course-title {
+        font-size: 1.8rem;
+    }
+
+    .tournament-courses .course-image {
+        height: 250px;
+    }
+
+    .tournament-courses .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tournament-courses .cta-section {
+        padding: 40px 24px;
+        margin-top: 60px;
+    }
+
+    .tournament-courses .cta-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tournament-courses .section-title {
+        font-size: 1.8rem;
+    }
+
+    .tournament-courses .course-title {
+        font-size: 1.5rem;
+    }
+
+    .tournament-courses .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
